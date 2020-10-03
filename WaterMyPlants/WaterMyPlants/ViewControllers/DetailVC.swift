@@ -211,7 +211,7 @@ class DetailVC: UIViewController {
     
     @IBAction func editMenuSaveButtonPressed(_ sender: UIButton) {
         performSpringAnimation(forButton_: editMenuSaveButton)
-        guard let imageURL = self.injectedPlant?.img_url,
+        guard let _ = self.injectedPlant?.img_url,
             let nickname = editMenuPlantNameTextfield.text,
             !nickname.isEmpty,
             let injectedPlant = injectedPlant else { return }

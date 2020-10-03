@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="11B-me-Nzv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="11B-me-Nzv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,14 +26,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqB-jS-7xN">
-                                <rect key="frame" x="100" y="145" width="214" height="177.5"/>
+                                <rect key="frame" x="100" y="144.5" width="214" height="178.5"/>
                                 <accessibility key="accessibilityConfiguration" identifier="CreatePlantVC.AddImageButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EqB-jS-7xN" secondAttribute="height" multiplier="119:100" id="pdo-eu-ZbO"/>
                                 </constraints>
                                 <color key="tintColor" name="MyLightGreen"/>
                                 <state key="normal" backgroundImage="camera.viewfinder" catalog="system">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addPhotoButtonPressed:" destination="A55-Te-ght" eventType="touchUpInside" id="d3x-3k-880"/>
@@ -50,9 +52,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="Uon-4v-Qft"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title=" Cancel" image="xmark" catalog="system">
-                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelButtonPressed:" destination="A55-Te-ght" eventType="touchUpInside" id="6ut-nb-q3x"/>
@@ -64,16 +66,16 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="118" id="s2T-QB-7HM"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title=" Done" image="checkmark" catalog="system">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="A55-Te-ght" eventType="touchUpInside" id="fOH-ew-zUh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pch-4U-HeK">
-                                <rect key="frame" x="160" y="267" width="94" height="20.5"/>
+                                <rect key="frame" x="160.5" y="267" width="93" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,13 +87,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" alpha="0.0" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q2n-QH-bHw" customClass="CustomProgressView" customModule="WaterMyPlants" customModuleProvider="target">
-                                <rect key="frame" x="20" y="418" width="374" height="2"/>
+                                <rect key="frame" x="20" y="417" width="374" height="4"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="progressTintColor" systemColor="systemGreenColor"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-kY-V3W">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-kY-V3W">
                                 <rect key="frame" x="20" y="440" width="374" height="30"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <accessibility key="accessibilityConfiguration" identifier="CreatePlantVC.RemoveImageButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mRy-eN-L8X"/>
@@ -168,7 +170,8 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="24z-iF-4KP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DKJ-WB-fm4" firstAttribute="centerY" secondItem="2Fz-kY-V3W" secondAttribute="centerY" id="0yx-Tr-Qn4"/>
                             <constraint firstItem="pch-4U-HeK" firstAttribute="top" secondItem="EqB-jS-7xN" secondAttribute="bottom" constant="-57" id="10n-Ii-Ehf"/>
@@ -203,7 +206,6 @@
                             <constraint firstItem="Z1S-8d-cTw" firstAttribute="top" secondItem="Gha-II-ExH" secondAttribute="bottom" constant="8" id="uTK-Xp-81V"/>
                             <constraint firstItem="24z-iF-4KP" firstAttribute="trailing" secondItem="EqB-jS-7xN" secondAttribute="trailing" constant="100" id="vO1-ik-aSv"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="24z-iF-4KP"/>
                     </view>
                     <navigationItem key="navigationItem" id="6wt-PX-0Zn"/>
                     <connections>
@@ -241,7 +243,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dt7-fv-LDj">
                                 <rect key="frame" x="0.0" y="88" width="414" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="itp-I2-gHS"/>
                                 </constraints>
@@ -271,7 +273,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 day late" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyl-TB-Cnj">
                                                     <rect key="frame" x="8" y="8" width="81" height="21"/>
-                                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="0U8-S8-chc"/>
                                                     </constraints>
@@ -314,7 +316,7 @@
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1R-vH-1rN">
                                 <rect key="frame" x="18" y="270" width="378" height="592"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xMf-lx-grQ">
                                     <size key="itemSize" width="166" height="194"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -369,7 +371,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjd-UY-mgg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjd-UY-mgg">
                                 <rect key="frame" x="322" y="770" width="62" height="62"/>
                                 <color key="backgroundColor" name="MyLightBlue"/>
                                 <accessibility key="accessibilityConfiguration" identifier="HomeVC.AddPlantButton"/>
@@ -383,7 +385,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Cjh-o8-OL4" firstAttribute="top" secondItem="Dt7-fv-LDj" secondAttribute="bottom" constant="10" id="1TN-lh-eQJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f1R-vH-1rN" secondAttribute="trailing" constant="18" id="AFG-MI-u5K"/>
@@ -398,7 +401,6 @@
                             <constraint firstItem="Dt7-fv-LDj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wr1-tV-79R"/>
                             <constraint firstItem="Dt7-fv-LDj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x0v-Ye-6Ol"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Water Today" id="tKM-wt-ESr">
                         <barButtonItem key="backBarButtonItem" title=" " id="uEm-tG-FoX"/>
@@ -435,7 +437,7 @@
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" estimatedRowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-Oj-eic">
                                 <rect key="frame" x="0.0" y="500" width="394" height="396"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" textLabel="AGe-UZ-dd9" detailTextLabel="yxb-4K-0Os" rowHeight="88" style="IBUITableViewCellStyleSubtitle" id="C3Z-Rf-dNH">
                                         <rect key="frame" x="0.0" y="28" width="394" height="88"/>
@@ -494,7 +496,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="75e-LF-9w7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="J4U-Uo-48L" firstAttribute="top" secondItem="eS4-cB-YDI" secondAttribute="top" id="AMc-rX-0gP"/>
                             <constraint firstItem="dIJ-b5-feC" firstAttribute="top" secondItem="Abr-TT-0eE" secondAttribute="bottom" constant="8" id="E56-8H-7IZ"/>
@@ -514,7 +517,6 @@
                             <constraint firstItem="J4U-Uo-48L" firstAttribute="trailing" secondItem="75e-LF-9w7" secondAttribute="trailing" id="uCK-aU-4Pm"/>
                             <constraint firstItem="75e-LF-9w7" firstAttribute="trailing" secondItem="Abr-TT-0eE" secondAttribute="trailing" constant="20" id="urL-sH-Tnb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="75e-LF-9w7"/>
                     </view>
                     <navigationItem key="navigationItem" id="G8f-7R-fox">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="AMS-lI-Y1x">
@@ -563,9 +565,9 @@
                                 <outlet property="delegate" destination="hMk-j5-qQr" id="LNB-pj-sC3"/>
                             </connections>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWh-9o-ALq">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWh-9o-ALq">
                             <rect key="frame" x="16" y="232" width="254" height="30"/>
-                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="Gnx-EF-6Na"/>
                             </constraints>
@@ -606,9 +608,9 @@
                                 <outlet property="delegate" destination="hMk-j5-qQr" id="Z1t-sR-7mr"/>
                             </connections>
                         </pickerView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mL-yv-sfZ">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mL-yv-sfZ">
                             <rect key="frame" x="16" y="273" width="254" height="30"/>
-                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="g2E-83-WPa"/>
                             </constraints>
@@ -620,7 +622,8 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="a2u-uB-wLn"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="0hB-En-riG" firstAttribute="leading" secondItem="a2u-uB-wLn" secondAttribute="leading" constant="16" id="0yD-J2-tqz"/>
                         <constraint firstItem="0hB-En-riG" firstAttribute="top" secondItem="WsB-wj-n9J" secondAttribute="bottom" constant="8" id="8My-OE-o24"/>
@@ -645,7 +648,6 @@
                         <constraint firstItem="a2u-uB-wLn" firstAttribute="trailing" secondItem="9mL-yv-sfZ" secondAttribute="trailing" constant="16" id="vqd-hG-fJE"/>
                         <constraint firstItem="9mL-yv-sfZ" firstAttribute="top" secondItem="OWh-9o-ALq" secondAttribute="bottom" constant="11" id="x5s-zI-TnG"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="a2u-uB-wLn"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="8"/>
@@ -681,7 +683,7 @@
         <segue reference="xky-6z-h4R"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="camera.viewfinder" catalog="system" width="128" height="114"/>
+        <image name="camera.viewfinder" catalog="system" width="128" height="115"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="logo" width="500" height="500"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
@@ -691,5 +693,17 @@
         <namedColor name="MyLightGreen">
             <color red="0.5690000057220459" green="0.64300000667572021" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

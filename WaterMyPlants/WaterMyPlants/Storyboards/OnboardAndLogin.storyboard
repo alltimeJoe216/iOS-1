@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIv-Md-cij">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIv-Md-cij">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,17 +15,17 @@
             <objects>
                 <viewController id="GjY-jk-uBg" customClass="OnboardViewController" customModule="WaterMyPlants" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gLm-z7-4Qw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpV-pl-lnR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxa-I9-bWh">
-                                        <rect key="frame" x="8" y="8" width="359" height="215"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="215"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL9-LV-YXU">
-                                                <rect key="frame" x="16" y="24" width="184" height="165"/>
+                                                <rect key="frame" x="16" y="24" width="223" height="165"/>
                                                 <string key="text">Create
 Account</string>
                                                 <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="36"/>
@@ -31,7 +33,7 @@ Account</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BCG-vN-Tvk">
-                                                <rect key="frame" x="209" y="50" width="110" height="115"/>
+                                                <rect key="frame" x="248" y="50" width="110" height="115"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="o4j-8O-xdI"/>
                                                     <constraint firstAttribute="height" constant="115" id="uqY-Jg-hGj"/>
@@ -50,11 +52,11 @@ Account</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17V-Na-T99" userLabel="Grey View2">
-                                        <rect key="frame" x="8" y="226" width="359" height="273"/>
+                                        <rect key="frame" x="8" y="226" width="398" height="424"/>
                                         <color key="backgroundColor" name="MyLightBlue"/>
                                     </view>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Fb-sv-82U">
-                                        <rect key="frame" x="120" y="231" width="135" height="32"/>
+                                        <rect key="frame" x="139.66666666666666" y="231" width="134.99999999999997" height="32"/>
                                         <segments>
                                             <segment title="Sign Up"/>
                                             <segment title="Sign In"/>
@@ -64,7 +66,7 @@ Account</string>
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wp1-UH-CRY">
-                                        <rect key="frame" x="17" y="519" width="121.5" height="123"/>
+                                        <rect key="frame" x="17.000000000000007" y="670" width="121.66666666666669" height="123"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="123" id="792-el-7iE"/>
                                         </constraints>
@@ -72,8 +74,8 @@ Account</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zis-TJ-rS0">
-                                        <rect key="frame" x="288" y="577" width="47" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zis-TJ-rS0">
+                                        <rect key="frame" x="327" y="728" width="47" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="OnboardVC.SignInButton"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Sign In"/>
@@ -81,15 +83,15 @@ Account</string>
                                             <action selector="signIn:" destination="GjY-jk-uBg" eventType="touchUpInside" id="dcU-69-KIA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-uO-f5I">
-                                        <rect key="frame" x="288" y="577" width="54" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-uO-f5I">
+                                        <rect key="frame" x="327" y="728" width="54" height="30"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
                                             <action selector="signUp:" destination="GjY-jk-uBg" eventType="touchUpInside" id="Kjd-Sd-Z1Y"/>
                                         </connections>
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgV-Ym-hqO">
-                                        <rect key="frame" x="0.0" y="270" width="375" height="241"/>
+                                        <rect key="frame" x="0.0" y="270" width="414" height="392"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PMP-EL-WuB">
                                                 <rect key="frame" x="20" y="20" width="340" height="182"/>
@@ -134,12 +136,12 @@ Account</string>
                                         <viewLayoutGuide key="frameLayoutGuide" id="8Qr-hU-STu"/>
                                     </scrollView>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbL-Eh-tCS">
-                                        <rect key="frame" x="192.5" y="526" width="142.5" height="22"/>
+                                        <rect key="frame" x="231.66666666666663" y="677" width="142.33333333333337" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="142.5" id="lcp-fP-hag"/>
                                         </constraints>
                                         <state key="normal" title=" Remember Me" image="square" catalog="system">
-                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="linkColor"/>
                                         </state>
                                         <connections>
                                             <action selector="rememberMeButtonPressed:" destination="GjY-jk-uBg" eventType="touchUpInside" id="msP-sk-Yfl"/>
@@ -171,14 +173,14 @@ Account</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Mi2-8o-gd1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zpV-pl-lnR" firstAttribute="leading" secondItem="Mi2-8o-gd1" secondAttribute="leading" id="0aA-xC-jCY"/>
                             <constraint firstItem="zpV-pl-lnR" firstAttribute="top" secondItem="Mi2-8o-gd1" secondAttribute="top" id="XXO-4U-brL"/>
                             <constraint firstItem="Mi2-8o-gd1" firstAttribute="bottom" secondItem="zpV-pl-lnR" secondAttribute="bottom" id="alo-4p-zsc"/>
                             <constraint firstItem="Mi2-8o-gd1" firstAttribute="trailing" secondItem="zpV-pl-lnR" secondAttribute="trailing" id="wjh-0X-mMW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Mi2-8o-gd1"/>
                     </view>
                     <navigationItem key="navigationItem" id="xmX-dS-lGl"/>
                     <connections>
@@ -225,5 +227,11 @@ Account</string>
         <namedColor name="MyLightBlue">
             <color red="0.71399998664855957" green="0.77600002288818359" blue="0.79199999570846558" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

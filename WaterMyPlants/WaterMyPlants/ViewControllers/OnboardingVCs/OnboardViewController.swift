@@ -3,7 +3,7 @@
 //  WaterMyPlants
 //
 //  Created by Joe Veverka on 6/19/20.
-//  Copyright © 2020 Shawn James. All rights reserved.
+//  Copyright © 2020 Joe Veverka. All rights reserved.
 //
 
 import UIKit
@@ -31,7 +31,7 @@ class OnboardViewController: UIViewController {
     @IBOutlet weak var rememberMeButton: UIButton!
     
     //MARK: - Properties
-    var plantController = PlantController()
+    var plantController = PlantController() 
     var selectedLoginType: LoginType = .signIn {
         
         didSet {

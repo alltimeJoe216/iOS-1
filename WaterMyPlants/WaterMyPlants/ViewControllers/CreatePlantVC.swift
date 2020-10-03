@@ -11,6 +11,7 @@ import Cloudinary
 
 class CreatePlantVC: UIViewController, UITextFieldDelegate {
     
+    //MARK: IBOutlet
     @IBOutlet weak var selectedImage: UIImageView!
     @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var addAPhotoLabel: UILabel!
@@ -22,6 +23,7 @@ class CreatePlantVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var plantDescriptionTextField: UITextField!
     @IBOutlet weak var timeIntervalPicker: UIPickerView!
     
+    //MARK: - Properties
     public var imagePicker: UIImagePickerController? // save reference to it
     lazy var cloudinaryConfiguration = CLDConfiguration(cloudName: "dvlhbfwmm", apiKey: "346953818272633", secure: true)
     lazy var cloudinaryController = CLDCloudinary(configuration: cloudinaryConfiguration)
@@ -53,18 +55,7 @@ class CreatePlantVC: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
-    /// sets up the view to their initial state
-    private func setupInitialViews() {
-        deactivateButton(uploadThisImageButton)
-        deactivateButton(removeThisImageButton)
-        uploadProgressBar.alpha = 0
-        uploadProgressPercentLabel.alpha = 0
-        plantNicknameTextField.addBottomBorder()
-        plantDescriptionTextField.addBottomBorder()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard)) // handles tap anywhere to dismiss keyboard
-        view.addGestureRecognizer(tap)
-    }
-    
+    //MARK: - IBACtions
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: false)
     }
@@ -97,14 +88,34 @@ class CreatePlantVC: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: false)
     }
     
+    //MARK: - Private
+    /// sets up the view to their initial state
+    private func setupInitialViews() {
+        
+        deactivateButton(uploadThisImageButton)
+        deactivateButton(removeThisImageButton)
+        
+        uploadProgressBar.alpha = 0
+        uploadProgressPercentLabel.alpha = 0
+        
+        plantNicknameTextField.addBottomBorder()
+        plantDescriptionTextField.addBottomBorder()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                 action: #selector(UIInputViewController.dismissKeyboard)) // handles tap anywhere to dismiss keyboard
+        view.addGestureRecognizer(tap)
+    }
+    
+    // Set water date
     private func setInitialH20date(dayCountFromPicker: Int) -> String {
         "\(Date()), \(dayCountFromPicker)"
     }
-    
+    // Add Photo button pressed
     @IBAction func addPhotoButtonPressed(_ sender: UIButton) {
         presentPhotoLibraryActionSheet()
     }
     
+    // Access Photo Library
     private func presentPhotoLibraryActionSheet() {
         // make sure imagePicker is nill
         if self.imagePicker != nil {
@@ -114,29 +125,40 @@ class CreatePlantVC: UIViewController, UITextFieldDelegate {
         // init image picker
         self.imagePicker = UIImagePickerController()
         // action sheet
-        let actionSheet = UIAlertController(title: "Select Source Type", message: nil, preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "Select Source Type",
+                                            message: nil,
+                                            preferredStyle: .actionSheet)
         // imagePickerActions
         if UIImagePickerController.isSourceTypeAvailable(.camera) { // need to have real device
-            actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            actionSheet.addAction(UIAlertAction(title: "Camera",
+                                                style: .default,
+                                                handler: { _ in
                 self.presentImagePicker(controller: self.imagePicker!, sourceType: .camera)
             }))
         }
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { _ in
+            actionSheet.addAction(UIAlertAction(title: "Photo Library",
+                                                style: .default,
+                                                handler: { _ in
                 self.presentImagePicker(controller: self.imagePicker!, sourceType: .photoLibrary)
             }))
         }
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
-            actionSheet.addAction(UIAlertAction(title: "Saved Albums", style: .default, handler: { _ in
+            actionSheet.addAction(UIAlertAction(title: "Saved Albums",
+                                                style: .default,
+                                                handler: { _ in
                 self.presentImagePicker(controller: self.imagePicker!, sourceType: .savedPhotosAlbum)
             }))
         }
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        actionSheet.addAction(UIAlertAction(title: "Cancel",
+                                            style: .cancel))
         // present action sheet
         self.present(actionSheet, animated: true)
     }
     
-    func presentImagePicker(controller: UIImagePickerController, sourceType: UIImagePickerController.SourceType) {
+    func presentImagePicker(controller: UIImagePickerController,
+                            sourceType: UIImagePickerController.SourceType) {
+        
         controller.delegate = self
         controller.sourceType = sourceType
         self.present(controller, animated: true)
@@ -167,7 +189,9 @@ class CreatePlantVC: UIViewController, UITextFieldDelegate {
     /// uploads an image and returns a URL of it's location in the imageURL property in the CreatePlantVC
     private func uploadImage() {
         guard let imageData: Data = selectedImage.image?.jpegData(compressionQuality: 1) else { return }
-        cloudinaryController.createUploader().upload(data: imageData, uploadPreset: "dwx67sbr", progress: { (progress) in
+        cloudinaryController.createUploader().upload(data: imageData,
+                                                     uploadPreset: "dwx67sbr",
+                                                     progress: { (progress) in
             // handle progress
             self.uploadProgressBar.alpha = 1
             self.uploadProgressPercentLabel.alpha = 1
@@ -223,11 +247,20 @@ class CreatePlantVC: UIViewController, UITextFieldDelegate {
         button.alpha = 0
     }
     
+    // Observers
     func createObservers() {
         // listen for keyboard events
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)),
+                                               name: UIResponder.keyboardWillChangeFrameNotification,
+                                               object: nil)
     }
     
     /// moves the keyboard up
@@ -246,8 +279,9 @@ class CreatePlantVC: UIViewController, UITextFieldDelegate {
     }
     
 }
-
+//MARK: -Picker
 extension CreatePlantVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    // Image picker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             return self.imagePickerControllerDidCancel(picker)
@@ -273,7 +307,7 @@ extension CreatePlantVC: UIImagePickerControllerDelegate, UINavigationController
     }
     
 }
-
+//MARK: - Picker Delegate
 extension CreatePlantVC: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int { 2 }
     
